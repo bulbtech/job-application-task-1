@@ -8,9 +8,21 @@ We'll give you some requirements that must be done and for which you'll be evalu
 
 ## Getting started/finished
 
-#### Fork
+#### Create new repository
 
-To get started, **fork this repository** to your personal account. 
+To get started, 
+1) create new blank repository, on your personal github account or someware publicly accessible).
+
+2) Clone the repository with the task
+```
+git clone --bare https://github.com/bulbtech/job-application-task-1
+```
+
+3) Push to repository created in step 1.
+```
+git push --mirror <your-repo-url>
+```
+
 Basic cli angular project structure is already provided. You can of course delete everything and start from scratch. 
 
 #### Run
@@ -36,9 +48,9 @@ for usage in your services.
 As best you can.
 Keep the commit history - don't squash.
 
-#### Submit PR
+#### Let us know when you're done
 
-Despite not having a time limit, we recommend that you come back to us within **two days**.
+Send us URL to your repository,
 
 ## What are you going to do?
 
@@ -88,12 +100,13 @@ curl -H "Accept: application/vnd.github.mockingbird-preview" https://api.github.
 
 Timeline is a list of events (assigned, commented, labeled ...) with overlapping set of properties.
 
-- Each event is defined by it's definition:
+- For example, each event can be defined as:
    - event_name: **string**
    - component: **Type**
    - properties: **Interface**
-- Implement minimun of two _event definitions_ + default one which will be rendered insted of any not implemented event
-- Use dynamic component rendering Angular feature (NgComponentOutlet directive or other more manual approach)
+
+- Implement minimun of two _event definitions_, plus default one which will be rendered insted of any not implemented event
+- Use dynamic component rendering Angular feature
 - Provide a feature for external/additional registration of event definitions by implementing Angular _multi providers feature_ and _Injection tokens_. 
 - All 'resources (components, services, ...)' of Issue Timeline View must be contained in specific NgModule. 
 This module will have a functionality for excluding events from view at runtime, implemenented through static **forFeature** method. This method will have an optional input `excludeEventsFromView: Array<EventName>` where `EventName` is preferably strongly typed. Provided event name will exclude this event type from the list of events.

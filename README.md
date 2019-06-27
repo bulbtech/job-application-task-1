@@ -11,7 +11,7 @@ We'll give you some requirements that must be done and for which you'll be evalu
 #### Create new repository
 
 To get started, 
-1) create new blank repository, on your personal github account or someware publicly accessible).
+1) create new blank repository, on your personal github account.
 
 2) Clone the repository with the task
 ```
